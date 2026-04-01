@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Story of Bhagabanta Giri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: #faf9f7;
+    color: #1a1a1a;
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: #1a1a1a;
+    color: #faf9f7;
+    padding: 60px 40px 50px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-style: italic;
+    color: #aaa;
+    font-size: 15px;
+  }
+
+  header .byline {
+    display: inline-block;
+    margin-top: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666;
+    border-top: 1px solid #333;
+    padding-top: 14px;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 100;
+    padding: 0 40px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 14px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav ul li a:hover { color: #1a1a1a; }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    padding: 60px 0 48px;
+    border-bottom: 1px solid #e8e8e8;
+    transition: background 0.2s;
+    border-radius: 4px;
+  }
+
+  .section:last-child { border-bottom: none; }
+  .section:hover { background: #f5f3f0; padding-left: 20px; padding-right: 20px; margin-left: -20px; margin-right: -20px; }
+
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 36px 0 12px;
+  }
+
+  h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #888;
+    margin: 28px 0 8px;
+  }
+
+  p { margin-bottom: 18px; color: #2a2a2a; }
+
+  p:last-child { margin-bottom: 0; }
+
+  em { font-style: italic; }
+
+  strong { font-weight: 600; color: #1a1a1a; }
+
+  /* ── INTRO PULLQUOTE ── */
+  .pullquote {
+    border-left: 3px solid #1a1a1a;
+    padding: 4px 0 4px 20px;
+    margin: 28px 0;
+    font-size: 20px;
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* ── LISTS ── */
+  ul.blog-list, ol.blog-list {
+    margin: 12px 0 18px 24px;
+    color: #2a2a2a;
+  }
+
+  ul.blog-list li, ol.blog-list li {
+    margin-bottom: 8px;
+    padding-left: 4px;
+  }
+
+  /* ── INDENTED BLOCK ── */
+  .indent {
+    padding-left: 28px;
+    border-left: 2px solid #e0e0e0;
+    margin: 16px 0;
+    color: #444;
+  }
+
+  /* ── TWO COLUMNS ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 20px 0;
+  }
+
+  .two-col .col-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+
+  /* ── THREE COLUMNS ── */
+  .three-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin: 20px 0;
+  }
+
+  .col-block {
+    background: #f0eeeb;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .col-block .col-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 10px;
+  }
+
+  .col-block h4 {
+    font-size: 14px;
+    color: #1a1a1a;
+    margin: 0 0 10px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .col-block ul { margin-left: 16px; }
+  .col-block ul li { font-size: 13px; color: #555; margin-bottom: 5px; }
+
+  /* ── PROJECT BLOCK ── */
+  .project-block {
+    background: #f7f5f2;
+    border: 1px solid #e0ddd8;
+    border-radius: 6px;
+    padding: 28px 28px 24px;
+    margin: 28px 0;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .project-block:hover {
+    border-color: #bbb;
+    background: #f0eeeb;
+  }
+
+  .project-block h3 { margin-top: 0; margin-bottom: 16px; }
+
+  .project-block .case-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+    align-items: start;
+  }
+
+  .case-row .case-key {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aaa;
+    padding-top: 2px;
+  }
+
+  .case-row .case-val {
+    font-size: 14px;
+    color: #3a3a3a;
+    line-height: 1.7;
+  }
+
+  /* ── BUG CARD ── */
+  .bug-block {
+    padding: 20px 0;
+    border-bottom: 1px solid #ebebeb;
+  }
+  .bug-block:last-child { border-bottom: none; }
+
+  .bug-id {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #c0392b;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .bug-block h3 { margin-top: 0; font-size: 17px; color: #c0392b; margin-bottom: 10px; }
+
+  /* ── TIMELINE ── */
+  .timeline-item {
+    padding: 20px 0 20px 28px;
+    border-left: 2px solid #ddd;
+    position: relative;
+    margin-bottom: 4px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px; top: 26px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 2px solid #faf9f7;
+    outline: 1px solid #1a1a1a;
+  }
+
+  .tl-year {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 4px;
+  }
+
+  .tl-title { font-size: 17px; font-weight: 600; margin-bottom: 2px; }
+  .tl-place { font-size: 13px; color: #888; font-style: italic; margin-bottom: 10px; }
+  .tl-insight { font-size: 14px; color: #555; font-style: italic; }
+
+  /* ── WORK CYCLE ── */
+  .cycle-row {
+    display: flex;
+    gap: 0;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .cycle-step {
+    flex: 1;
+    text-align: center;
+    padding: 16px 8px;
+    border-right: 1px solid #e0e0e0;
+    transition: background 0.2s;
+  }
+
+  .cycle-step:last-child { border-right: none; }
+  .cycle-step:hover { background: #f0eeeb; }
+
+  .cycle-num {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ccc;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .cycle-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  /* ── LOG ENTRIES ── */
+  .log-entry {
+    padding: 20px 0;
+    border-bottom: 1px solid #ebebeb;
+    transition: background 0.2s;
+  }
+
+  .log-entry:last-child { border-bottom: none; }
+  .log-entry:hover { background: #f7f5f2; padding-left: 12px; padding-right: 12px; margin-left: -12px; margin-right: -12px; }
+
+  .log-meta {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .log-id {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+  }
+
+  .log-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: #aaa;
+  }
+
+  .log-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #ddd;
+    color: #999;
+    padding: 2px 8px;
+    border-radius: 20px;
+  }
+
+  .log-text { font-size: 14px; color: #555; line-height: 1.8; }
+
+  /* ── CLOSING ── */
+  .closing-section {
+    padding: 60px 0 80px;
+    text-align: center;
+  }
+
+  .closing-section p {
+    color: #555;
+    max-width: 480px;
+    margin: 0 auto 18px;
+  }
+
+  .closing-section .sign {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-top: 36px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #1a1a1a;
+    color: #555;
+    text-align: center;
+    padding: 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 650px) {
+    header h1 { font-size: 28px; }
+    nav ul { gap: 0; }
+    nav ul li a { padding: 12px 10px; font-size: 11px; }
+    .two-col { grid-template-columns: 1fr; }
+    .three-col { grid-template-columns: 1fr; }
+    .cycle-row { flex-direction: column; }
+    .cycle-step { border-right: none; border-bottom: 1px solid #e0e0e0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p style="font-family:'Inter',sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#666; margin-bottom:14px;">A Personal Essay</p>
+  <h1>The Story of Bhagabanta Giri</h1>
+  <p>Not a success story. A documentation of a process.</p>
+  <span class="byline">Bhagabanta Giri &nbsp;·&nbsp; NIT Rourkela &nbsp;·&nbsp; 2026</span>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#early">Early Life</a></li>
+    <li><a href="#thinking">Thinking</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#principles">Principles</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#ambitions">Ambitions</a></li>
+    <li><a href="#practical">Practical</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
+    <li><a href="#weaknesses">Weaknesses</a></li>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#logs">Logs</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- INTRODUCTION -->
+  <div class="section" id="intro">
+    <div class="section-label">Introduction</div>
+    <h2>A System Under Construction</h2>
+
+    <p>Most people describe themselves through labels.</p>
+    <p><em>Student. Engineer. Gamer. Writer.</em></p>
+    <p>But labels are static — and I don't see myself as something static.</p>
+
+    <div class="pullquote">
+      I see myself as a system under construction.
+    </div>
+
+    <p>A system that is constantly being designed, tested, broken, and rebuilt. A system that evolves with time, experience, and failure. A system that is not defined by where it currently stands, but by how effectively it adapts and improves.</p>
+
+    <p>My name is Bhagabanta Giri, and I am currently pursuing Biomedical Engineering at NIT Rourkela. But that is just the entry point, not the definition.</p>
+
+    <p>What truly defines me is how I approach life.</p>
+
+    <p>I don't just go through things, learn or plan — I analyze them, try to understand the underlying structure and build systems that can sustain those plans even when motivation disappears. Because <strong>motivation is unreliable. Systems are not.</strong></p>
+
+    <p>This blog is not a record of achievements. It is a documentation of a process.</p>
+  </div>
+
+  <!-- EARLY LIFE -->
+  <div class="section" id="early">
+    <div class="section-label">Origins</div>
+    <h2>Early Life &amp; Foundations</h2>
+
+    <p>I was born in Baripada, Odisha, in May 2008. From there, my life moved across multiple districts as my father's government job required frequent relocation. For the most part, I grew up in tribal districts like Koraput, Kandhamala, and Rayagada.</p>
+
+    <p>Some of my earliest memories are from Kandhamal district — Phulbani and G. Udayagiri — where I lived between the ages of three and eight. The houses we lived in often had no running water or electricity.</p>
+
+    <p>But strangely, I never experienced it as hardship.</p>
+
+    <p>It was a childhood defined by curiosity, simplicity, and contentment. Looking back, it feels like a slow and natural unfolding rather than a struggle.</p>
+
+    <p>One of the most vivid memories from my childhood is my first visit to Bhubaneswar. It wasn't just a trip — it was an experience. The train journey itself felt significant. And when I reached the city, everything seemed larger than life:</p>
+
+    <ul class="blog-list">
+      <li>Well-laid roads</li>
+      <li>Electrified houses</li>
+      <li>A massive overhead water tank</li>
+      <li>A huge library</li>
+      <li>Small shops selling colorful drinks and sweets</li>
+    </ul>
+
+    <p>It felt like stepping into a completely different world.</p>
+  </div>
+
+  <!-- ORIGIN OF THINKING -->
+  <div class="section" id="thinking">
+    <div class="section-label">Philosophy</div>
+    <h2>The Origin of My Thinking</h2>
+
+    <p>There wasn't a single defining moment that shaped me. No sudden realization. No dramatic turning point.</p>
+
+    <p>Instead, it was something quieter: <strong>curiosity combined with observation.</strong></p>
+
+    <p>From an early age, I found it difficult to accept things blindly. Whenever something was presented as "the right way," I would instinctively question:</p>
+
+    <div class="indent">
+      <p>Why is this the right way?<br/>
+      In what context does this work?<br/>
+      Where does it fail?</p>
+    </div>
+
+    <p>Over time, this developed into a personal filter. I realized that:</p>
+
+    <ul class="blog-list">
+      <li>Not all advice is useful</li>
+      <li>Not all knowledge is applicable</li>
+      <li>Not all experiences translate across situations</li>
+    </ul>
+
+    <p>This led me to a rule I still follow:</p>
+
+    <div class="pullquote">
+      Never give or accept advice unless you understand the circumstance, the experience, and the observation behind it.
+    </div>
+
+    <p>This principle helps me filter noise and focus on what actually matters. Because <strong>most mistakes don't come from lack of knowledge — but from misapplied knowledge.</strong></p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section" id="education">
+    <div class="section-label">Version History</div>
+    <h2>Education &amp; Academic Approach</h2>
+
+    <p>I am currently pursuing a Bachelor of Technology (B.Tech) in Biomedical Engineering at the National Institute of Technology Rourkela.</p>
+
+    <div class="timeline-item">
+      <div class="tl-year">2024 — Current</div>
+      <div class="tl-title">B.Tech — Biomedical Engineering</div>
+      <div class="tl-place">NIT Rourkela</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-year">2024</div>
+      <div class="tl-title">AISSCE — Class XII</div>
+      <div class="tl-place">DAV Public School, Chandrasekharpur</div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-year">2022</div>
+      <div class="tl-title">ICSE — Class X</div>
+      <div class="tl-place">Public School, Jeypore</div>
+    </div>
+    <div class="timeline-item" style="border-left-color:transparent;">
+      <div class="tl-year">Earlier</div>
+      <div class="tl-title">Homeschooled → Government School → CISCE</div>
+      <div class="tl-place">Koraput · Kandhamala · Rayagada</div>
+    </div>
+
+    <h3>How I Learn</h3>
+
+    <p>One of the biggest shifts in my learning approach has been moving away from passive consumption.</p>
+
+    <div class="two-col">
+      <div>
+        <div class="col-label">I prefer</div>
+        <ul class="blog-list">
+          <li>Documentation over tutorials</li>
+          <li>Codebases over explanations</li>
+          <li>Implementation over observation</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-label">Why</div>
+        <p style="font-size:14px; color:#555;">Watching only "feels" like learning. Real learning happens when something doesn't work — when you're forced to figure it out yourself. That's where growth happens.</p>
+      </div>
+    </div>
+
+    <h3>A Normal Day</h3>
+
+    <p>My day is loosely divided into:</p>
+
+    <ul class="blog-list">
+      <li><strong>Learning blocks</strong></li>
+      <li><strong>Building blocks</strong></li>
+      <li><strong>Low-effort tasks</strong></li>
+    </ul>
+
+    <p>This ensures that even on low-energy days, progress continues.</p>
+
+    <h3>Using JARVIS as a Control Layer</h3>
+
+    <p>I use my own system — JARVIS — as a central interface for task tracking, routine management, reminders, and logs.</p>
+
+    <h4>How I Handle Work</h4>
+    <p>Work is approached in a 5-step cycle:</p>
+
+    <div class="cycle-row">
+      <div class="cycle-step"><span class="cycle-num">01</span><span class="cycle-label">Understand</span></div>
+      <div class="cycle-step"><span class="cycle-num">02</span><span class="cycle-label">Break Down</span></div>
+      <div class="cycle-step"><span class="cycle-num">03</span><span class="cycle-label">Execute</span></div>
+      <div class="cycle-step"><span class="cycle-num">04</span><span class="cycle-label">Debug</span></div>
+      <div class="cycle-step"><span class="cycle-num">05</span><span class="cycle-label">Refine</span></div>
+    </div>
+
+    <h4>Dealing with Problems</h4>
+    <p>When something doesn't work, the approach is systematic:</p>
+    <ul class="blog-list">
+      <li>Identify the exact point of failure</li>
+      <li>Reduce the problem to a smaller test case</li>
+      <li>Check assumptions</li>
+      <li>Fix one variable at a time</li>
+    </ul>
+
+    <h4>Handling Low-Productivity Days</h4>
+    <p>Not every day is optimal. On such days, urgency and importance take the backseat — priority is handled by task size and ease. Easier and smaller tasks have higher priority. Momentum is maintained, even if output is low.</p>
+
+    <h4>End of Day Reflection</h4>
+    <p>At the end of the day, I review what was planned, what was actually done, and where time was lost. This is not for guilt. It is for adjustment of tasks for the next day.</p>
+  </div>
+
+  <!-- PRINCIPLES -->
+  <div class="section" id="principles">
+    <div class="section-label">Operating System</div>
+    <h2>Principles &amp; Discipline</h2>
+
+    <h3>Semester-Wise Thinking</h3>
+
+    <p>I strongly believe in thinking in semesters, not years. Each semester is treated as a complete cycle:</p>
+
+    <div class="two-col">
+      <ul class="blog-list">
+        <li><strong>Learn</strong> — Understand core concepts</li>
+        <li><strong>Build</strong> — Apply through projects</li>
+      </ul>
+      <ul class="blog-list">
+        <li><strong>Test</strong> — Identify weaknesses</li>
+        <li><strong>Improve</strong> — Refine the process</li>
+      </ul>
+    </div>
+
+    <p>Thinking in years delays action. Thinking in semesters creates urgency and clarity.</p>
+
+    <h3>Financial Discipline</h3>
+
+    <p>The 30-30-40 rule is the one golden rule that my father told me about and I follow it to my best till date:</p>
+
+    <div class="indent">
+      <p><strong>30%</strong> &nbsp;—&nbsp; Needs<br/>
+      <strong>30%</strong> &nbsp;—&nbsp; Wants<br/>
+      <strong>40%</strong> &nbsp;—&nbsp; Savings</p>
+    </div>
+
+    <p>Simple. Sustainable. Effective.</p>
+
+    <h3>Beliefs That Stay With Me</h3>
+
+    <ul class="blog-list">
+      <li>Freedom comes with responsibility.</li>
+      <li>Self-awareness is necessary.</li>
+      <li>Your greatest enemy is the best version of yourself, beat that person.</li>
+    </ul>
+
+    <p>And my favourite, which my mother told me to follow no matter what:</p>
+
+    <div class="pullquote">
+      Always leave the toilet and newspaper the way you would want to find it.
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section" id="projects">
+    <div class="section-label">Systems in Practice</div>
+    <h2>Projects</h2>
+
+    <!-- JARVIS -->
+    <div class="project-block">
+      <h3>JARVIS — A Personal Intelligence System</h3>
+
+      <p style="font-size:14px; color:#555; margin-bottom:20px;">JARVIS is a personal assistant system that I am building to understand and adapt to user behavior over time. The idea is simple: instead of a static assistant that only responds to commands, JARVIS is designed to learn from interactions and improve continuously.</p>
+
+      <div class="case-row"><span class="case-key">What it is</span><span class="case-val">A Telegram-based assistant that acts as a central system for managing tasks, tracking habits, and organizing daily routines.</span></div>
+      <div class="case-row"><span class="case-key">How it works</span>
+        <span class="case-val">
+          Takes input through commands and messages · Stores and analyzes patterns in behavior · Uses data to suggest routines, reminders, and improvements · Continuously updates responses based on past interactions.
+        </span>
+      </div>
+      <div class="case-row"><span class="case-key">Why I made it</span><span class="case-val">Most tools require constant manual input and don't adapt to the user. I wanted to build something that reduces decision fatigue and becomes more useful the more it is used.</span></div>
+      <div class="case-row"><span class="case-key">What it solves</span>
+        <span class="case-val">Lack of personalized productivity systems · Repetitive manual planning · Difficulty maintaining consistency.</span>
+      </div>
+      <div class="case-row"><span class="case-key">Planned</span>
+        <span class="case-val">AI/ML integration · Cross-platform support · Smarter habit tracking · Voice interaction and automation.</span>
+      </div>
+    </div>
+
+    <!-- LINE FOLLOWING BOT -->
+    <div class="project-block">
+      <h3>Line Following Bot</h3>
+
+      <p style="font-size:14px; color:#555; margin-bottom:20px;">A robotics project focused on building a bot that can follow a predefined path using sensors.</p>
+
+      <div class="case-row"><span class="case-key">What it is</span><span class="case-val">A small autonomous robot that detects and follows a line on the ground.</span></div>
+      <div class="case-row"><span class="case-key">How it works</span><span class="case-val">IR sensors detect contrast between line and surface · Signals sent to microcontroller · Controller adjusts motor speed and direction to stay on track.</span></div>
+      <div class="case-row"><span class="case-key">Why I made it</span><span class="case-val">To understand the basics of robotics, sensor integration, and real-time decision-making.</span></div>
+      <div class="case-row"><span class="case-key">Planned</span><span class="case-val">Better accuracy and speed control · Obstacle detection · More efficient path correction algorithms.</span></div>
+    </div>
+
+    <!-- KLOOM -->
+    <div class="project-block">
+      <h3>Kloom (Vision X)</h3>
+
+      <p style="font-size:14px; color:#555; margin-bottom:20px;">Kloom is a web application designed to solve common problems faced by students on campus.</p>
+
+      <div class="case-row"><span class="case-key">What it is</span><span class="case-val">A platform that helps students access and manage campus-related information and services in one place.</span></div>
+      <div class="case-row"><span class="case-key">How it works</span><span class="case-val">Authentication systems for user accounts · Database-backed data storage · Backend logic for requests.</span></div>
+      <div class="case-row"><span class="case-key">Why I made it</span><span class="case-val">Campus systems are often scattered and inefficient. I wanted to create a centralized solution that simplifies access and improves usability.</span></div>
+      <div class="case-row"><span class="case-key">Planned</span><span class="case-val">Better UI/UX · More features based on student feedback · Scalability for larger user bases · Integration with other campus services.</span></div>
+    </div>
+
+    <div class="pullquote" style="margin-top:32px;">
+      A system is valuable not because it is complex, but because it is useful.
+    </div>
+  </div>
+
+  <!-- AMBITIONS -->
+  <div class="section" id="ambitions">
+    <div class="section-label">In Pipeline</div>
+    <h2>Ambitions</h2>
+
+    <h3>Modular Speaker System</h3>
+    <p>I want to build a modular speaker system composed of independent units that can function individually or combine to form a more powerful system. It is about understanding modular design — how small, self-sufficient systems can scale through coordination. The goal is flexibility: portable when needed, powerful when combined, adaptable to different environments. Similar ideas exist in commercial products, but the objective here is not replication — it is understanding the system from first principles.</p>
+
+    <h3>Game Design: Decisions That Persist</h3>
+    <p>I want to build a game where the player controls two characters, with decisions that directly influence the final outcome. Eventually, one of those characters becomes the final challenge. This is not just a storytelling mechanic. It is an exploration of state persistence, decision consequence systems, and long-term feedback loops. The idea is simple: <strong>every action should carry weight — not immediately, but eventually.</strong></p>
+
+    <h3>Mechanical Suit Concept</h3>
+    <p>I want to design a basic mechanical suit capable of assisting movement or performing controlled tasks. This is not about building something cinematic. It is about understanding mechanical linkages, power transmission, control systems, and human-machine interaction. The goal is to bridge the gap between theoretical engineering and physical execution.</p>
+
+    <h3>Mechanical Music Machine</h3>
+    <p>Inspired by mechanical music systems, I want to build a machine that produces music through motion. Instead of digital sound generation, this system relies on physical interactions, timing mechanisms, and mechanical precision. It is an exploration of how mathematics, physics, and art intersect in real systems.</p>
+
+    <h3>Ground-Level Exploration &amp; Service</h3>
+    <p>I want to travel across India in a minimal, grounded way — using general transport, staying in basic accommodations like dharmsalas and ashrams instead of hotels, and contributing services for stay. Eating in langars instead of fancy restaurants. It has no underlying reason for "building systems" and stuff. Its ambition in its purest form. Travelling India the nomadic way.</p>
+
+    <h3>The Collaboration Dream</h3>
+    <p>And one idea that represents pure ambition: to collaborate with some of the greatest science communicators — Neil deGrasse Tyson, Brian Cox, Mark Rober, Michael Stevens (Vsauce), and Derek Muller (Veritasium) — to create a large-scale project that explains science in its most engaging, clear, and impactful form.</p>
+  </div>
+
+  <!-- PRACTICAL THINKING -->
+  <div class="section" id="practical">
+    <div class="section-label">Life Beyond Systems</div>
+    <h2>Practical Thinking</h2>
+
+    <p>Most systems assume stability. I don't.</p>
+
+    <p>I believe in being prepared when systems fail — not because I expect a "doomsday," but because real life is unpredictable. Accidents, power cuts, network failures, natural disasters, or even small everyday breakdowns can disrupt everything we rely on.</p>
+
+    <p>This mindset didn't come randomly. My father emphasized it heavily — teaching me that independence is not just about knowledge or money, but about being capable when things go wrong.</p>
+
+    <p>These skills may sound extreme at first, but they are deeply practical:</p>
+
+    <div class="three-col">
+      <div class="col-block">
+        <div class="col-label">Emergency Response</div>
+        <ul>
+          <li>Bleeding control &amp; basic first aid</li>
+          <li>CPR &amp; choking (Heimlich)</li>
+          <li>Fire response &amp; safe evacuation</li>
+          <li>Water safety &amp; swimming</li>
+          <li>Shock recognition &amp; basic trauma care</li>
+          <li>Mental first aid</li>
+        </ul>
+      </div>
+      <div class="col-block">
+        <div class="col-label">When Systems Fail</div>
+        <ul>
+          <li>Phone &amp; power resilience</li>
+          <li>Signalling for help</li>
+          <li>Shelter &amp; warmth</li>
+          <li>Water purification</li>
+          <li>Navigation (compass &amp; maps)</li>
+          <li>Financial readiness</li>
+        </ul>
+      </div>
+      <div class="col-block">
+        <div class="col-label">Everyday Independence</div>
+        <ul>
+          <li>Basic vehicle &amp; bike fixes</li>
+          <li>Electrical safety</li>
+          <li>Drilling, mounting &amp; repairs</li>
+          <li>Sewing &amp; clothing repair</li>
+          <li>Cooking &amp; food safety</li>
+          <li>Knot tying &amp; improvisation</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="margin-top:24px;">These are not "survivalist" skills. They are life skills. Because <strong>real capability is revealed when convenience disappears</strong> — and when it does, preparation is what separates panic from control.</p>
+  </div>
+
+  <!-- HOBBIES -->
+  <div class="section" id="hobbies">
+    <div class="section-label">Offload Processes</div>
+    <h2>Hobbies</h2>
+
+    <h3>Gaming</h3>
+    <p>I enjoy games not just for entertainment, but for engagement. Titles like <em>Sekiro</em>, <em>Fallout: New Vegas</em>, and <em>Oblivion</em> provide challenge, exploration, and freedom of approach. Gaming, for me, is a balance between relaxation and engagement.</p>
+
+    <h3>Music</h3>
+    <p>Music is where structure meets intuition. I actively explore and play multiple instruments: acoustic, electric, and semi-acoustic guitars, ukulele and banjo, piano and keyboard. What interests me most is not just playing — but understanding. How chords are structured. How scales create emotion. How rhythm interacts with melody. <strong>Music, at its core, is mathematics expressed through sound.</strong></p>
+
+    <h3>Poker: Mathematics in Disguise</h3>
+    <p>Poker is often misunderstood as gambling. In reality, at a deeper level, it is a system built on probability, expected value (EV), risk management, and behavioral analysis. Every decision can be broken down mathematically: pot odds, bluff frequency, long-term expectation. At scale, poker is not luck-driven. It is <strong>a decision-making system under uncertainty</strong> — similar to real-world scenarios.</p>
+  </div>
+
+  <!-- WEAKNESSES -->
+  <div class="section" id="weaknesses">
+    <div class="section-label">Known Bugs</div>
+    <h2>Weaknesses</h2>
+
+    <div class="bug-block">
+      <div class="bug-id">Bug #001</div>
+      <h3>Procrastination</h3>
+      <p>Tasks are understood, planned, and structured… but not started on time. This creates a chain reaction:</p>
+      <div class="indent">
+        <p>Delay → Pressure → Compromised quality → Missed opportunities</p>
+      </div>
+      <p>Left unchecked, it does not waste hours. It wastes momentum.</p>
+    </div>
+
+    <div class="bug-block">
+      <div class="bug-id">Bug #002</div>
+      <h3>Overthinking</h3>
+      <p>Spending excessive time analyzing instead of acting. It creates the illusion of progress: plans improve, ideas refine — but output remains unchanged. At its worst, it replaces execution entirely.</p>
+    </div>
+
+    <div class="bug-block">
+      <div class="bug-id">Bug #003</div>
+      <h3>Inconsistency</h3>
+      <p>Periods of high focus followed by sudden drops. The system works — but not continuously. And without consistency, even strong systems fail to produce long-term results.</p>
+    </div>
+
+    <div class="bug-block">
+      <div class="bug-id">Bug #004</div>
+      <h3>Execution Gap</h3>
+      <p>Ideas are clear. Systems are designed. But execution does not always match that clarity. This is the most critical weakness. Because in the real world: <strong>only executed systems exist. Everything else is theory.</strong></p>
+    </div>
+  </div>
+
+  <!-- GOALS -->
+  <div class="section" id="goals">
+    <div class="section-label">Roadmap v2.0</div>
+    <h2>Goals: Structured Direction</h2>
+
+    <div class="three-col">
+      <div class="col-block">
+        <div class="col-label">Short-Term &nbsp;·&nbsp; Alpha</div>
+        <ul>
+          <li>Strengthen technical fundamentals</li>
+          <li>Maintain academic performance</li>
+          <li>Build real-world projects</li>
+        </ul>
+      </div>
+      <div class="col-block">
+        <div class="col-label">Mid-Term &nbsp;·&nbsp; Beta</div>
+        <ul>
+          <li>Contribute to GSoC</li>
+          <li>Secure meaningful internships</li>
+          <li>Build a strong technical portfolio</li>
+        </ul>
+      </div>
+      <div class="col-block">
+        <div class="col-label">Long-Term &nbsp;·&nbsp; Stable</div>
+        <ul>
+          <li>High-impact, high-paying role</li>
+          <li>Build scalable systems</li>
+          <li>Contribute to meaningful tech solutions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pullquote" style="margin-top:36px;">
+      But beyond all structured goals: to think clearly, act effectively, and build things that matter.
+    </div>
+  </div>
+
+  <!-- SYSTEM LOGS -->
+  <div class="section" id="logs">
+    <div class="section-label">System Logs</div>
+    <h2>Log Entries</h2>
+
+    <div class="log-entry">
+      <div class="log-meta">
+        <span class="log-id">Log_2026_04_02</span>
+        <span class="log-date">April 2, 2026</span>
+        <span class="log-tag">System</span>
+      </div>
+      <div class="log-text">Portfolio initialized. The challenge was not writing about achievements — there aren't many yet. The challenge was writing honestly about process. Documentation of a system in progress is more vulnerable than a list of wins. Proceeding anyway.</div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-meta">
+        <span class="log-id">Log_2026_03_15</span>
+        <span class="log-date">March 15, 2026</span>
+        <span class="log-tag">Reflection</span>
+      </div>
+      <div class="log-text">Observed a failure pattern: the days I plan the most are often the days I execute the least. Hypothesis: excessive planning creates an illusion of progress and reduces urgency. Countermeasure deployed — time-cap planning to 20 minutes, then switch to execution regardless of clarity. Early results: positive.</div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-meta">
+        <span class="log-id">Log_2026_02_28</span>
+        <span class="log-date">February 28, 2026</span>
+        <span class="log-tag">Build</span>
+      </div>
+      <div class="log-text">JARVIS reached a functional milestone — task tracking and reminders running consistently for 3 weeks. The system is not intelligent yet, but it is reliable. Reliability first, intelligence later. This is the correct sequence for any system.</div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-meta">
+        <span class="log-id">Log_2026_01_12</span>
+        <span class="log-date">January 12, 2026</span>
+        <span class="log-tag">Insight</span>
+      </div>
+      <div class="log-text">Reading about distributed systems and noticed the analogy: fault tolerance in software is the same as resilience in life. A system that crashes entirely on a single point of failure is poorly designed. Building redundancy — in skills, in routines, in thinking — is engineering, not paranoia.</div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-meta">
+        <span class="log-id">Log_2025_11_03</span>
+        <span class="log-date">November 3, 2025</span>
+        <span class="log-tag">Music</span>
+      </div>
+      <div class="log-text">Began analyzing chord progressions as mathematical structures. I-IV-V-I is not just "sounds good" — it is tension and resolution encoded in frequency ratios. The harmonic series is physics. Music theory is applied mathematics. Every domain I explore eventually reveals a system underneath it.</div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-meta">
+        <span class="log-id">Log_2025_09_01</span>
+        <span class="log-date">September 1, 2025</span>
+        <span class="log-tag">Semester</span>
+      </div>
+      <div class="log-text">New semester initiated. Running the full cycle: Learn → Build → Test → Improve. Last semester's biggest failure: too much time in Learn mode, not enough in Build mode. This semester's primary objective is inverting that ratio. Execution is the only feedback loop that counts.</div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing-section">
+    <h2 style="font-size:28px; margin-bottom:20px;">System Still Under Construction.</h2>
+    <p>This is not a success story. There are no major achievements here. No claims of mastery.</p>
+    <p>This is simply a system in progress. There will be mistakes. There will be failures. There will be changes. But the process continues.</p>
+    <p>Because growth is not an event. It is a continuous system.</p>
+    <p style="font-style:italic; color:#888;">And this system is still under construction.</p>
+    <div class="sign">— Bhagabanta Giri &nbsp;·&nbsp; NIT Rourkela &nbsp;·&nbsp; 2026</div>
+  </div>
+
+</main>
+
+<footer>
+  Bhagabanta Giri &nbsp;·&nbsp; The Story of a System in Progress &nbsp;·&nbsp; 2026
+</footer>
+
+</body>
+</html>
